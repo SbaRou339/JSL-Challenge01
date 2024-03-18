@@ -48,4 +48,4 @@ checkin.color = none
 status.style.color = STATUS_MAP.status.color
 let cReserve = STATUS_MAP.status.canReserve ? 'enabled' : 'disabled'
 let cCheckout = STATUS_MAP.status.canCheckout ? 'enabled' : 'disabled'
-//checkin.2 = STATUS_MAP.status.canCheckIn ? 'enabled' : 'disabled'
+checkin.2 = STATUS_MAP.status.canCheckIn ? 'enabled' : 'disabled'
