@@ -27,35 +27,25 @@ const STATUS_MAP = {
 
 // Edit below line 
 
-status = selector(status)
-reserve = selector(reserve)
-checkout = selector(checkout)
-checkin = selector(checkin)
 
-status = selector(status)
-reserve = selector(reserve)
-checkout = selector(checkout)
-checkin = selector(checkin)
+const status = document.querySelectorAll('.status');
+const reserve = document.querySelectorAll('.reserve');
+const checkout = document.querySelectorAll('.checkout');
+const checkin = document.querySelectorAll('.checkin');
+//checkin.0.color = none
+//status.style.color = STATUS_MAP.status.color;
+let reserved= STATUS_MAP.status.canReserve ? 'enabled' : 'disabled'
+let checkOut  = STATUS_MAP.status.canCheckout ? 'enabled' : 'disabled'
+let chekin = STATUS_MAP.status.canCheckIn ? 'enabled' : 'disabled'
 
-status = selector(status)
-reserve = selector(reserve)
-checkout = selector(checkout)
-checkin = selector(checkin)
+checkin.color = none
+//status.style.color = STATUS_MAP.status.color
+let Oreserve = STATUS_MAP.status.canReserve ? 'enabled' : 'disabled'
+let oCheckout = STATUS_MAP.status.canCheckout ? 'enabled' : 'disabled'
+let oCheckin = STATUS_MAP.status.canCheckIn ? 'enabled' : 'disabled'
 
-checkin.0.color = none
-status.0.style.color = STATUS_MAP.status.color
-reserve.0 = STATUS_MAP.status.canReserver ? 'enabled' : 'disabled'
-checkout.0 = STATUS_MAP.status.canCheckout ? 'enabled' : 'disabled'
-checkin.0 = STATUS_MAP.status.canCheckIn ? 'enabled' : 'disabled'
-
-checkin.1.color = none
-status.1.style.color = STATUS_MAP.status.color
-reserve.1 = STATUS_MAP.status.canReserver ? 'enabled' : 'disabled'
-checkout.1 = STATUS_MAP.status.canCheckout ? 'enabled' : 'disabled'
-checkin.1 = STATUS_MAP.status.canCheckIn ? 'enabled' : 'disabled'
-
-checkin.2.color = none
-status.2.style.color = STATUS_MAP.status.color
-reserve.2 = STATUS_MAP.status.canReserver ? 'enabled' : 'disabled'
-checkout.2 = STATUS_MAP.status.canCheckout ? 'enabled' : 'disabled'
-checkin.2 = STATUS_MAP.status.canCheckIn ? 'enabled' : 'disabled'
+checkin.color = none
+status.style.color = STATUS_MAP.status.color
+let cReserve = STATUS_MAP.status.canReserve ? 'enabled' : 'disabled'
+let cCheckout = STATUS_MAP.status.canCheckout ? 'enabled' : 'disabled'
+//checkin.2 = STATUS_MAP.status.canCheckIn ? 'enabled' : 'disabled'
