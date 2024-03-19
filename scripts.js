@@ -51,15 +51,21 @@ const STATUS_MAP = {
 // checkout[2] = STATUS_MAP.overdue.canCheckout ?  'disabled'
 // checkin[2] = STATUS_MAP.overdue.canCheckIn ? 'enabled' 
 
-const books = document.querySelectorAll("[id^='book']");
-books.forEach((book, index) => {
-    const status = book.querySelector('.status');
-    const reserve = book.querySelector('.reserve');
-    const checkout = book.querySelector('.checkout');
-    const checkin = book.querySelector('.checkin');
 
-    status.style.color = STATUS_MAP[status.innerText.trim()].color;
-    reserve.disabled = !STATUS_MAP[status.innerText.trim()].canReserve;
-    checkout.disabled = !STATUS_MAP[status.innerText.trim()].canCheckout;
-    checkin.disabled = !STATUS_MAP[status.innerText.trim()].canCheckIn;
+// Select all book elements and iterate over them
+const books = document.querySelectorAll("[id^='book']");
+
+
+books.forEach((book, index) => {
+    // Select elements within each book
+    const status = book.querySelector('.status'); // Status text element
+    const reserve = book.querySelector('.reserve'); // Reserve text element
+    const checkout = book.querySelector('.checkout'); // CheckOut text element
+    const checkin = book.querySelector('.checkin'); // CheckIn text element
+
+    // Update properties based on the status defined in STATUS_MAP
+    status.style.color = STATUS_MAP[status.innerText.trim()].color; // Update status text color
+    reserve.disabled = !STATUS_MAP[status.innerText.trim()].canReserve; // Enable/disable Reserve button
+    checkout.disabled = !STATUS_MAP[status.innerText.trim()].canCheckout; // Enable/disable Checkout button
+    checkin.disabled = !STATUS_MAP[status.innerText.trim()].canCheckIn; // Enable/disable Check In button
 });
