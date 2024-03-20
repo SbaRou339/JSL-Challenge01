@@ -26,7 +26,7 @@ const STATUS_MAP = {
 }
 
 // Edit below line 
-// create function to select all elements by name, cause we cant do anything without having to create a function
+// create function to select all elements by name, cause we cant do anything without having to create a functions
 function selector(className) {
     return document.getElementsByClassName(className); //This function takes a class name as input and returns something like an array object of all elements with that class name in the document.
 }
