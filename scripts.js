@@ -26,6 +26,7 @@ const STATUS_MAP = {
 }
 
 // Edit below line 
+
 // create function to select all elements by name, cause we cant do anything without having to create a functions
 function selector(className) {
     return document.getElementsByClassName(className); //This function takes a class name as input and returns something like an array object of all elements with that class name in the document.
@@ -51,3 +52,28 @@ for (let i = 0; i < Object.keys(STATUS_MAP).length; i++) {  //this is a loop, th
     checkout.style.filter = 'grayscale(100%)';
     checkin.style.filter = 'grayscale(100%)';
 }
+=======
+
+// let status = selector(status);
+// let reserve = selector(reserve);
+// let checkout = selector(checkout);
+// let checkin = selector(checkin);
+
+
+// checkin[0].color = ''
+// status[0].style.color = STATUS_MAP.shelf.color
+// reserve[0] = STATUS_MAP.shelf.canReserve ? 'enabled' 
+// checkout[0] = STATUS_MAP.shelf.canCheckout ? 'enabled' 
+// checkin[0] = STATUS_MAP.shelf.canCheckIn ? 'disabled'
+
+// checkin[1].color = ''
+// status[1].style.color = STATUS_MAP.reserved.color
+// reserve[1] = STATUS_MAP.reserved.canReserve ? 'disabled'
+// checkout[1] = STATUS_MAP.reserved.canCheckout ? 'enabled' 
+// checkin[1] = STATUS_MAP.reserved.canCheckIn ?  'disabled'
+
+// checkin[2].color = ''
+// status[2].style.color = STATUS_MAP.overdue.color
+// reserve[2] = STATUS_MAP.overdue.canReserve ?  'disabled'
+// checkout[2] = STATUS_MAP.overdue.canCheckout ?  'disabled'
+// checkin[2] = STATUS_MAP.overdue.canCheckIn ? 'enabled' 
